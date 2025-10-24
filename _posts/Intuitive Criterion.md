@@ -5,27 +5,48 @@
 ## 记号
 考虑一个信号模型，在该博弈中有两个玩家：信息发送者(Player 1)、信息接收者(Player 2)；博弈的各个时机分别如下：
 
-1. 自然决定了发送者的类型 $\theta\in\Theta$ ，其中$\Theta$ 为类型集；
+1. 自然决定了发送者的类型 $\theta\in\Theta$ ，其中
+$\Theta$
+为类型集；
 2. 发送者能看到自己的类型，接受不了者无法观察到；
-3. 接收者只能观察到发送者发出的信息($m\in A_1$)然后采取行动$a\in A_2$ 。
+3. 接收者只能观察到发送者发出的信息($m\in A_1$)然后采取行动
+$a\in A_2$
+。
 
-考虑一个完美贝叶斯均衡$(m^*(\theta),s^*(m),\mu)$ 。我们记
+考虑一个完美贝叶斯均衡
+$(m^*(\theta),s^*(m),\mu)$
+。我们记
 
 $\Theta (m)$ 为只有这些类型的发送者才会发送信息m；
 
-$BR_2(\Theta(m),m)$ 为接收者收到m后的最优反应且赋予$\Theta (m)$ 类型以正的概率$\mu\in\Delta(\theta)$；
+$BR_2(\Theta(m),m)$ 
+为接收者收到m后的最优反应且赋予
+$\Theta (m)$ 
+类型以正的概率
+$\mu\in\Delta(\theta)$；
 
 $u_i(.,.,\theta)$ 为玩家i的回报；
 ## 两步走
 
-第一步：识别发送者的类型，发送者本着“只有类型$\theta$ 能够从这个行动中获益，所以我是类型$\theta$ 。”的想法，用发送者的行动作为信息给接收者发一个信息。
-存在$m\in A_1,\theta\in\Theta,\Theta(m)\subset\Theta$,使得
+第一步：识别发送者的类型，发送者本着“只有类型
+$\theta$ 
+能够从这个行动中获益，所以我是类型
+$\theta$ 
+。”的想法，用发送者的行动作为信息给接收者发一个信息。
+存在
+$m\in A_1,\theta\in\Theta,\Theta(m)\subset\Theta$
+,使得
 $$\forall \theta\in \Theta(m),u_1^*(\theta)>\max\limits_{a_2\in BR_2(\Theta(m),m)}u_1(m,a_2,\theta)$$
-其中$BR_2(\Theta(m),m)=\bigcup\limits_{\mu\in\Delta(\theta)}\argmax\limits_{a_2\in A_2}\sum\limits_{\theta\in\Theta(m)}\mu(\theta|m)u_2(m,a_2,\theta)$
+其中
+$BR_2(\Theta(m),m)=\bigcup_{\mu\in\Delta(\theta)} argmax_{a_2\in A_2}\sum_{\theta\in\Theta(m)}\mu(\theta|m)u_2(m,a_2,\theta)$
 
-因此我们称此处信息m对于类型为$\theta$ 的玩家1(发送者)是均衡占劣(*equilibrium dominated*)的。
+因此我们称此处信息m对于类型为
+$\theta$ 
+的玩家1(发送者)是均衡占劣(*equilibrium dominated*)的。
 
-第二步：检查是否类型为$\theta$ 的玩家1(发送者)想要偏离即使是再偏离以后的最差的情况，即
+第二步：检查是否类型为
+$\theta$ 
+的玩家1(发送者)想要偏离即使是再偏离以后的最差的情况，即
 $$\min\limits_{a_2\in BR_2(\Theta/ \Theta(m),m)}u_1(m,a_2,\theta)>u_1^*(\theta)$$
 
 如果该条件成立，则称该完美贝叶斯均衡违背了直觉准则。
